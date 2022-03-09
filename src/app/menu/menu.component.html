@@ -1,0 +1,61 @@
+
+<a routerLink="/"
+style="float: right; margin-top: -28px;">Homepage</a>
+<div 
+*ngFor="let meals of this.mealsCategory.categories let i = index">
+    <button 
+    (click)="buttonIsClicked(this.mealsCategory.categories[i].idCategory)"
+    class="buttonCategory" >
+    {{this.mealsCategory.categories[i].strCategory}}        
+   </button>
+      <div
+      *ngIf="buttonClicked && this.mealsCategory.categories[i].idCategory==this.numberOfIndex"
+      [ngClass]="{hideTable:this.showTable }">
+        <div 
+        class="tableData">       
+        <app-search
+        (searchTextChanged)="onSearchTextEntered($event)">
+        </app-search>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> No.</th>
+                            <th>Name</th>
+                            <th>Id</th>
+                            <th>Image</th>
+                        </tr>      
+                    </thead>
+                         <tbody>         
+                                <tr *ngFor="let meals of this.categoryItem.meals let i = index ">
+                                    <ng-container 
+                                    *ngIf="searchText===''|| this.categoryItem.meals[i].strMeal.toLowerCase().includes(searchText);"
+                                    >
+                                        <td>{{i+1}}.</td>
+                                        <td>{{this.categoryItem.meals[i].strMeal}}</td>
+                                        <td>{{this.categoryItem.meals[i].idMeal}}</td>
+                                        <td>
+                                        <img [src]="this.categoryItem.meals[i].strMealThumb" alt="image" width="50px" height="50px"
+                                        >
+                                        </td>
+                                    </ng-container> 
+                                </tr> 
+                        </tbody> 
+                </table>
+            </div>
+      </div>
+</div>
+
+<div class=" nationaDishes">
+            <a 
+            routerLink="nationalDishes" 
+            routerLinkActive="active"
+            style="margin-bottom: 5px; margin-left: 5px;">National dishes</a>
+            <router-outlet></router-outlet>
+          </div>
+ <div>
+     <a 
+     routerLink ="./allMeals" 
+     routerLinkActive="active" 
+     style="margin-left: 5px;">All meals</a>
+ </div> 
+

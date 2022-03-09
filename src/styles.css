@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    
+}
+a {
+    text-decoration: none;
+    padding-right: 5px;
+     background-color: rgb(235, 228, 206);
+     color: black;
+     margin-right: 2px;
+     border-style:outset;
+     border-radius: 17%;
+     border-color: rgb(160, 156, 104);
+     width: 100px;
+     display: inline-block;
+     box-shadow: 0 0 5px rgba(218, 205, 149, 0.794);
+     justify-content: center;
+     text-align: center;
+     cursor:grab;
+}
+hr {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.582);
+    
+    box-shadow: 0 0 6px rgba(121, 126, 81, 0.794);
+}
+p {
+    text-align: center;
+
+}
+
+button {
+    width: 100px;
+    margin: 5px;
+    background:rgb(195, 196, 176);
+    border-style:outset;
+    border-radius: 17%;
+    color: black;
+    box-shadow: 0 0 5px rgba(154, 165, 94, 0.794);
+    cursor: grab;
+}
+img:hover {
+    transform: scale(3.5);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+
+body {
+    background-color: rgba(245, 245, 244, 0.945);
+    
+}
+a:hover {
+    background-color: rgb(134, 129, 129);
+}
+a.active {
+    background-color: rgb(109, 101, 101);
+}
+.hideTable {
+    display: none;
+    
+}
+input {
+    background-color: rgb(243, 242, 210);
+     border-color: rgb(43, 40, 40);
+      float: left;
+}

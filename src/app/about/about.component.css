@@ -1,0 +1,23 @@
+p{
+    text-align: center;
+    font-size: 1.4em;
+    
+    
+}
+.about {
+    margin: 11%;
+    background-image :linear-gradient(rgb(192, 194, 172), rgb(236, 235, 188)) ;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(22, 24, 19, 0.794);
+    opacity: 85%;
+    animation: slide-up 3s;
+}
+@keyframes slide-up {
+    from{
+        opacity: 0.15;
+    }
+    
+    to{
+        opacity: 0.85;
+    }
+}

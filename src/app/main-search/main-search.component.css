@@ -1,0 +1,32 @@
+
+.searchResult {
+    
+    width: 80%;
+    display: inline-block;
+    border: 2px solid  rgb(131, 128, 81);
+   height: 80%;
+   background-color: rgb(231, 228, 205);
+   resize: vertical;
+   box-shadow: 0 0 10px rgba(22, 24, 19, 0.794);
+   animation: slide-up 0.5s;
+   opacity: 95%;
+}
+td {
+    width: 20%;
+    margin-left: 4px;
+    text-align: center;
+    
+}
+thead {
+    background-color: rgb(160, 155, 116);
+    width: 100%;
+}
+@keyframes slide-up {
+    from{
+        opacity: 0.15;
+    }
+    
+    to{
+        opacity: 0.95;
+    }
+}

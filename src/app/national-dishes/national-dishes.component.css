@@ -1,0 +1,17 @@
+
+td  , tr , th {
+    width: 25%;
+    border: 1px solid #585151;
+}
+tr:nth-child(even) {
+    background-color: #dbdb8b;
+  }
+tr:nth-child(odd) {
+  background-color: #99997e;
+  }
+ 
+  table {
+      width: 100%;
+      text-align: center;
+  }
+  

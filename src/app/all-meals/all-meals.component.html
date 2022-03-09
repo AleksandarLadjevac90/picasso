@@ -1,0 +1,55 @@
+
+
+
+    
+        <table>
+            <thead>
+              <tr>
+                <th>
+                    <a routerLink="/menu"
+                    style="width: fit-content; float: left;"><</a>
+                    Name</th>
+                <th>Id</th>
+                <th>Area</th>
+                <th>Tags</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Links</th>
+              </tr>
+                
+            </thead>
+            <tbody>
+                
+                    <ng-container *ngFor="let meals of this.sumAllMeals let i = index" >
+                        <ng-container *ngFor="let meal of this.sumAllMeals[i].meals let j = index"
+                        >   
+                            <tr>
+                                <td>{{this.sumAllMeals[i].meals[j].strMeal}}</td>
+                                <td>{{this.sumAllMeals[i].meals[j].idMeal}}</td>
+                                 <td>{{this.sumAllMeals[i].meals[j].strArea}}</td>
+                                 <td>{{this.sumAllMeals[i].meals[j].strTags}}</td>
+                                 <td>{{this.sumAllMeals[i].meals[j].strCategory}}</td>
+                                 <td>
+                                    <img [src]="this.sumAllMeals[i].meals[j].strMealThumb" alt="image" width="50px" height="50px">
+                                </td>
+                                <td>
+                                    <a [href]="this.sumAllMeals[i].meals[j].strYoutube"target="_blank"
+                                    style="resize: horizontal;">View on YT</a>
+                                </td>
+                                
+                            </tr>
+                        
+                        </ng-container>
+                    </ng-container>
+                  
+            </tbody>
+        </table>
+    
+            
+        
+   
+        
+    
+
+    
+

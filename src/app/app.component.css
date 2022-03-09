@@ -1,0 +1,23 @@
+.mainPaige{
+    opacity: 95%;
+    font-size-adjust: inherit;
+    resize:both;
+    font-size: 1.4em;
+    background-image :linear-gradient(rgb(221, 223, 194), rgb(236, 235, 188)) ;
+}
+.title{
+    text-align: center;
+    padding-top: 5px;
+    text-shadow: 0 0 10px rgba(95, 85, 53, 0.794);
+}
+.main-container {
+    background-image: url('https://cdn.pixabay.com/photo/2017/10/27/10/49/cook-2893904_1280.png');
+    background-size: 45%;
+    background-repeat:no-repeat;
+    background-position:center;
+    opacity: 95%;
+    width: 100%;
+    height: 100vh;
+    
+}
+

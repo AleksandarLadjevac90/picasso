@@ -1,0 +1,60 @@
+<div >
+    <input 
+    style type="search"
+    placeholder="Search all meals"
+     (input)="search.updateQuery($event)"
+     style="margin-top: 5px;">
+       <button 
+              (click)="toggleMealInfo()"
+               style="width: fit-content;">show results/hide     
+      </button>
+   <ng-container *ngFor="let meal of search.responseData.meals let i = index">
+            <ng-container 
+            *ngIf="searchQuery==strMeal; else message">
+               <table 
+               [ngClass]="{hideTable:search.searchQuery===''}"
+               style="width: 100%; text-align: center;">
+                  <div 
+                  class="searchResult"
+                  *ngIf="mealInfo">
+                     <thead style="display: block;">
+                        <th style="width: 100%;">{{search.responseData.meals[i].strMeal}}/{{search.responseData.meals[i].idMeal}}</th> 
+                     </thead>
+                       <img 
+                       [src]="search.responseData.meals[i].strMealThumb"
+                       style="width: 80px; height: 80px; align-items:flex-start">
+                          <tr>
+                            <p><b>Area:</b> {{search.responseData.meals[i].strArea}}</p>
+                            <p><b>Tags:</b>{{search.responseData.meals[i].strTags}}</p>
+                            <a [href]="search.responseData.meals[i].strSource"target="_blank"
+                            >Source</a><br>
+                            <a 
+                            [href]="search.responseData.meals[i].strYoutube"target="_blank"
+                            >View on YT</a>
+                            <p ><b>Instruction:</b>{{search.responseData.meals[i].strInstructions}}</p>
+                            <p ><b>Ingridients:</b>{{search.responseData.meals[i].strIngredient1}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient2}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient3}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient4}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient5}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient6}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient7}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient8}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient9}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient10}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient11}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient12}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient13}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient14}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient15}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient16}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient17}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient18}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient19}}</p>
+                            <p >{{search.responseData.meals[i].strIngredient20}}</p>
+                        </tr>
+                    </div>
+                </table>   
+            </ng-container>    
+    </ng-container>
+  </div>
